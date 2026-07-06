@@ -122,7 +122,7 @@ a:hover{
         <a href="#license">license</a>,
         <a href="#created">created</a>,
         <a href="#modified">modified</a>,
-        <a href="#parentAsset">parentAsset</a>,
+        <a href="#parentId">parentId</a>,
         <a href="#keyword">keyword</a>,
         <a href="#temporalStart">temporalStart</a>,
         <a href="#temporalend">temporalEnd</a>,
@@ -884,20 +884,20 @@ marti:organization/itvDS
 
 
 <!-- ===================================================== -->
-<!-- PROPERTY: parentAsset -->
+<!-- PROPERTY: parentId -->
 <!-- ===================================================== -->
 
-<h2 id="parentAsset">Term Name: parentAsset</h2>
+<h2 id="parentId">Term Name: parentId</h2>
 
 <table class="term-table">
     <tr>
         <th>URI</th>
-        <td>https://marti/parentAsset</td>
+        <td>https://marti/parentId</td>
     </tr>
 
     <tr>
         <th>Label</th>
-        <td>parentAsset</td>
+        <td>parentId</td>
     </tr>
 
     <tr>
@@ -907,12 +907,12 @@ marti:organization/itvDS
 
     <tr>
         <th>Reused Property</th>
-        <td>dct:isPartOf</td>
+        <td>none</td>
     </tr>
 
     <tr>
         <th>Ontology</th>
-        <td>Dublin Core Terms</td>
+        <td>MARTi</td>
     </tr>
 
     <tr>
@@ -924,10 +924,10 @@ marti:organization/itvDS
         <th>Example</th>
         <td>
 <pre>
-@prefix dct: &lt;http://purl.org/dc/terms/&gt; .
+@prefix marti: &lt;https://marti/&gt; .
 
-&lt;https://marti/asset/130&gt;
-    dct:isPartOf &lt;https://marti/asset/129&gt; .
+&lt;https://marti/asset/130&gt;    
+    marti:parentId "129" .
 </pre>
         </td>
     </tr>
@@ -1660,7 +1660,11 @@ marti:organization/itvDS
 
     <tr>
         <th>Reused Property</th>
-        <td>org:organization</td>
+        <td>
+            <a href="https://www.w3.org/TR/2014/REC-vocab-org-20140116/#org:organization">
+                org:organization
+            </a>
+        </td>
     </tr>
 
     <tr>
@@ -1922,7 +1926,11 @@ marti:organization/itvDS
 
     <tr>
         <th>Reused Property</th>
-        <td>dct:type</td>
+        <td>
+            <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/#http://purl.org/dc/terms/type">
+               dct:type
+            </a>
+        </td>
     </tr>
 
     <tr>
