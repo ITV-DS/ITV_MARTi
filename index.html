@@ -112,6 +112,7 @@ a:hover{
         <a href="#name">name</a>,
         <a href="#email">email</a>,
         <a href="#agenttype">agentType</a>,
+        <a href="#propertygroup">propertyGroup</a>,
         <a href="#affiliatedOrganization">affiliatedOrganization</a>,
         <a href="#custodian">custodian</a>,
         <a href="#accessURL">accessURL</a>,
@@ -129,6 +130,10 @@ a:hover{
         <a href="#valid">valid</a>
         <a href="#alternateName">alternateName</a>,
         <a href="#suborganizationof">subOrganizationOf</a>,
+        
+
+
+        
 
         <!--tEM QUE VERIFICAR <a href="#manager">manager</a>,
         <a href="#propertygroup">propertyGroup</a>,
@@ -1689,57 +1694,6 @@ marti:organization/itvDS
 </table>
 
 
-<!-- runtimePlatform -->
-<h2 id="runtimePlatform">Property: runtimePlatform</h2>
-
-<table class="term-table">
-    <tr>
-        <th>URI</th>
-        <td>https://marti/property/runtimePlatform</td>
-    </tr>
-
-    <tr>
-        <th>Label</th>
-        <td>runtimePlatform</td>
-    </tr>
-
-    <tr>
-        <th>Definition</th>
-        <td>Ambiente computacional utilizado na execução de uma Activity ou associado a um ambiente Root.</td>
-    </tr>
-
-    <tr>
-        <th>Reused Property</th>
-        <td>
-            <a href="https://schema.org/version/30.0#term_RuntimePlatform">
-                schema:runtimePlatform
-            </a>
-        </td>
-    </tr>
-
-    <tr>
-        <th>Ontology</th>
-        <td>Schema.org</td>
-    </tr>
-
-    <tr>
-        <th>Type of Term</th>
-        <td>Property</td>
-    </tr>
-
-    <tr>
-        <th>Example</th>
-        <td>
-<pre>
-@prefix schema: &lt;https://schema.org/&gt; .
-
-&lt;https://marti/activity/501&gt;
-    schema:runtimePlatform "on-premises" .
-</pre>
-        </td>
-    </tr>
-</table>
-
 
 <!-- startedAtTime -->
 <h2 id="startedAtTime">Property: startedAtTime</h2>
@@ -1924,7 +1878,7 @@ marti:organization/itvDS
 
     <tr>
         <th>Reused Property</th>
-        <td>Nenhuma</td>
+        <td>None</td>
     </tr>
 
     <tr>
@@ -1944,7 +1898,11 @@ marti:organization/itvDS
 @prefix marti: &lt;https://marti/&gt; .
 
 &lt;https://marti/root/storage_environment_01&gt;
-    marti:propertyGroup "azure_storage_properties" .
+    marti:propertyGroup &lt;https://marti/property-group/environment_01&gt; .
+
+&lt;https://marti/property-group/environment_01&gt;
+    marti:resourceGroup "azusds" ;
+    marti:infrastructureType "onpremises" .
 </pre>
         </td>
     </tr>
