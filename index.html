@@ -100,41 +100,42 @@ a:hover{
     <th>Properties</th>
     <td>
 
-        <a href="#accesstype">accessType</a>,
-        <a href="#accessURL">accessURL</a>,
-        <a href="#affiliatedOrganization">affiliatedOrganization</a>,
-        <a href="#alternateName">alternateName</a>,
-        <a href="#assetType">assetType</a>,
-        <a href="#associatedWith">associatedWith</a>,
-        <a href="#codeRepository">codeRepository</a>,
-        <a href="#created">created</a>,
-        <a href="#custodian">custodian</a>,
-        <a href="#description">description</a>,
-        <a href="#email">email</a>,
-        <a href="#endedAtTime">endedAtTime</a>,
         <a href="#identifier">identifier</a>,
-        <a href="#keyword">keyword</a>,
-        <a href="#license">license</a>,
-        <a href="#manager">manager</a>,
-        <a href="#managerialid">managerialId</a>,
-        <a href="#mediaType">mediaType</a>,
-        <a href="#modified">modified</a>,
-        <a href="#name">name</a>,
+        <a href="#description">description</a>,
+        <a href="#codeRepository">codeRepository</a>,
+        <a href="#accesstype">accessType</a>,
+        <a href="#startedAtTime">startedAtTime</a>,
+        <a href="#endedAtTime">endedAtTime</a>,
+        <a href="#associatedWith">associatedWith</a>,
         <a href="#organization-prop">organization</a>,
+        <a href="#managerialid">managerialId</a>,
+        <a href="#name">name</a>,
+        <a href="#email">email</a>,
+        <a href="#agenttype">agentType</a>,
+        <a href="#affiliatedOrganization">affiliatedOrganization</a>,
+        <a href="#custodian">custodian</a>,
+        <a href="#accessURL">accessURL</a>,
+        <a href="#spatialCoverage">spatialCoverage</a>,
+        <a href="#assetType">assetType</a>,
+        <a href="#mediaType">mediaType</a>,
+        <a href="#source">source</a>,
+        <a href="#license">license</a>,
+        <a href="#created">created</a>,
+        <a href="#modified">modified</a>,
         <a href="#parentAsset">parentAsset</a>,
+        <a href="#keyword">keyword</a>,
+        <a href="#temporalStart">temporalStart</a>,
+        <a href="#temporalend">temporalEnd</a>,
+        <a href="#valid">valid</a>
+        <a href="#alternateName">alternateName</a>,
+        <a href="#suborganizationof">subOrganizationOf</a>,
+
+        <!--tEM QUE VERIFICAR <a href="#manager">manager</a>,
         <a href="#propertygroup">propertyGroup</a>,
         <a href="#runtimePlatform">runtimePlatform</a>,
-        <a href="#source">source</a>,
-        <a href="#spatialCoverage">spatialCoverage</a>,
-        <a href="#startedAtTime">startedAtTime</a>,
         <a href="#storedin">storedIn</a>,
-        <a href="#suborganizationof">subOrganizationOf</a>,
-        <a href="#temporalend">temporalEnd</a>,
-        <a href="#temporalStart">temporalStart</a>,
-        <a href="#title">title</a>,
-        <a href="#agenttype">agentType</a>,
-        <a href="#valid">valid</a>
-
+        <a href="#title">title</a>, -->
+        
     </td>
 </tr>
 
@@ -173,7 +174,11 @@ a:hover{
 
     <tr>
         <th>Reused Class</th>
-        <td>prov:Activity</td>
+        <td>
+            <a href="https://www.w3.org/TR/2013/REC-prov-o-20130430/#Activity">
+                prov:Activity
+            </a>
+        </td>
     </tr>
 
     <tr>
@@ -238,7 +243,11 @@ marti:activity/501
 
     <tr>
         <th>Reused Class</th>
-        <td>prov:Agent</td>
+        <td>
+            <a href="https://www.w3.org/TR/2013/REC-prov-o-20130430/#Agent">
+                prov:Agent
+            </a>
+        </td>
     </tr>
 
     <tr>
@@ -302,7 +311,11 @@ marti:agent/john
 
     <tr>
         <th>Reused Class</th>
-        <td>prov:Entity</td>
+        <td>
+            <a href="https://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity">
+                prov:Entity
+            </a>
+        </td>
     </tr>
 
     <tr>
@@ -432,7 +445,11 @@ marti:environment/storage_environment_01
 
     <tr>
         <th>Reused Class</th>
-        <td>org:Organization</td>
+        <td>
+            <a href="https://www.w3.org/TR/2014/REC-vocab-org-20140116/#org:Organization">
+                org:Organization
+            </a>
+        </td>
     </tr>
 
     <tr>
@@ -501,7 +518,11 @@ marti:organization/itvDS
 
     <tr>
         <th>Reused Property</th>
-        <td>dcat:accessURL</td>
+        <td>
+            <a href="https://www.w3.org/TR/2024/REC-vocab-dcat-3-20240822/#Property:distribution_access_url">
+                dcat:accessURL
+            </a>
+        </td>
     </tr>
 
     <tr>
@@ -552,7 +573,11 @@ marti:organization/itvDS
 
     <tr>
         <th>Reused Property</th>
-        <td>prov:wasAttributedTo</td>
+        <td>
+            <a href="https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAttributedTo">
+                prov:wasAttributedTo
+            </a>
+        </td>
     </tr>
 
     <tr>
@@ -603,7 +628,11 @@ marti:organization/itvDS
 
     <tr>
         <th>Reused Property</th>
-        <td>dc:description</td>
+        <td>
+            <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/#http://purl.org/dc/elements/1.1/description">
+                dc:description
+            </a>
+        </td>
     </tr>
 
     <tr>
@@ -656,7 +685,11 @@ marti:organization/itvDS
 
     <tr>
         <th>Reused Property</th>
-        <td>dct:identifier</td>
+        <td>
+            <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/#http://purl.org/dc/terms/identifier">
+                dct:identifier
+            </a>
+        </td>
     </tr>
 
     <tr>
@@ -707,7 +740,11 @@ marti:organization/itvDS
 
     <tr>
         <th>Reused Property</th>
-        <td>dct:spatial</td>
+        <td>
+            <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/#http://purl.org/dc/terms/spatial">
+                dct:spatial
+            </a>
+        </td>
     </tr>
 
     <tr>
@@ -815,7 +852,11 @@ marti:organization/itvDS
 
     <tr>
         <th>Reused Property</th>
-        <td>dct:created</td>
+        <td>
+            <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/#http://purl.org/dc/terms/created">
+                dct:created
+            </a>
+        </td>
     </tr>
 
     <tr>
@@ -917,7 +958,11 @@ marti:organization/itvDS
 
     <tr>
         <th>Reused Property</th>
-        <td>dcat:keyword</td>
+        <td>
+            <a href="https://www.w3.org/TR/2024/REC-vocab-dcat-3-20240822/#Property:resource_keyword">
+                dcat:keyword
+            </a>
+        </td>
     </tr>
 
     <tr>
@@ -968,7 +1013,11 @@ marti:organization/itvDS
 
     <tr>
         <th>Reused Property</th>
-        <td>dct:license</td>
+        <td>
+            <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/#http://purl.org/dc/terms/license">
+                dct:license
+            </a>
+        </td>
     </tr>
 
     <tr>
@@ -1019,7 +1068,11 @@ marti:organization/itvDS
 
     <tr>
         <th>Reused Property</th>
-        <td>dcat:mediaType</td>
+        <td>
+            <a href="https://www.w3.org/TR/2024/REC-vocab-dcat-3-20240822/#Property:distribution_media_type">
+                dcat:mediaType
+            </a>
+        </td>
     </tr>
 
     <tr>
@@ -1077,7 +1130,11 @@ marti:organization/itvDS
 
     <tr>
         <th>Reused Property</th>
-        <td>dct:modified</td>
+        <td>
+            <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/#http://purl.org/dc/terms/modified">
+                dct:modified
+            </a>
+        </td>
     </tr>
 
     <tr>
@@ -1128,7 +1185,11 @@ marti:organization/itvDS
 
     <tr>
         <th>Reused Property</th>
-        <td>dc:source</td>
+        <td>
+            <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/#http://purl.org/dc/elements/1.1/source">
+                dc:source
+            </a>
+        </td>
     </tr>
 
     <tr>
@@ -1179,7 +1240,11 @@ marti:organization/itvDS
 
     <tr>
         <th>Reused Property</th>
-        <td>dcat:startDate</td>
+        <td>
+            <a href="https://www.w3.org/TR/2024/REC-vocab-dcat-3-20240822/#Property:period_start_date">
+                dcat:startDate
+            </a>
+        </td>
     </tr>
 
     <tr>
@@ -1231,7 +1296,11 @@ marti:organization/itvDS
 
     <tr>
         <th>Reused Property</th>
-        <td>org:memberOf</td>
+        <td>
+            <a href="https://www.w3.org/TR/2014/REC-vocab-org-20140116/#org:memberOf">
+                org:memberOf
+            </a>
+        </td>
     </tr>
 
     <tr>
@@ -1279,7 +1348,11 @@ marti:organization/itvDS
 
     <tr>
         <th>Reused Property</th>
-        <td>schema:alternateName</td>
+        <td>
+            <a href="https://schema.org/version/30.0#term_alternateName">
+                schema:alternateName
+            </a>
+        </td>
     </tr>
 
     <tr>
@@ -1327,7 +1400,11 @@ marti:organization/itvDS
 
     <tr>
         <th>Reused Property</th>
-        <td>prov:wasAssociatedWith</td>
+        <td>
+            <a href="https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAssociatedWith">
+                prov:wasAssociatedWith
+            </a>
+        </td>
     </tr>
 
     <tr>
@@ -1375,7 +1452,11 @@ marti:organization/itvDS
 
     <tr>
         <th>Reused Property</th>
-        <td>schema:codeRepository</td>
+        <td>
+            <a href="https://schema.org/version/30.0#term_codeRepository">
+                schema:codeRepository
+            </a>
+        </td>
     </tr>
 
     <tr>
@@ -1423,7 +1504,11 @@ marti:organization/itvDS
 
     <tr>
         <th>Reused Property</th>
-        <td>foaf:mbox</td>
+        <td>
+            <a href="https://xmlns.com/foaf/spec/20140114.html#term_mbox">
+                foaf:mbox
+            </a>
+        </td>
     </tr>
 
     <tr>
@@ -1471,7 +1556,11 @@ marti:organization/itvDS
 
     <tr>
         <th>Reused Property</th>
-        <td>prov:endedAtTime</td>
+        <td>
+            <a href="https://www.w3.org/TR/2013/REC-prov-o-20130430/#endedAtTime">
+                prov:endedAtTime
+            </a>
+        </td>
     </tr>
 
     <tr>
@@ -1519,7 +1608,11 @@ marti:organization/itvDS
 
     <tr>
         <th>Reused Property</th>
-        <td>org:headOf</td>
+        <td>
+            <a href="hhttps://www.w3.org/TR/2014/REC-vocab-org-20140116/#property-headof">
+                org:headOf
+            </a>
+        </td>
     </tr>
 
     <tr>
@@ -1615,7 +1708,11 @@ marti:organization/itvDS
 
     <tr>
         <th>Reused Property</th>
-        <td>schema:runtimePlatform</td>
+        <td>
+            <a href="https://schema.org/version/30.0#term_RuntimePlatform">
+                schema:runtimePlatform
+            </a>
+        </td>
     </tr>
 
     <tr>
@@ -1663,7 +1760,11 @@ marti:organization/itvDS
 
     <tr>
         <th>Reused Property</th>
-        <td>prov:startedAtTime</td>
+        <td>
+            <a href="https://www.w3.org/TR/2013/REC-prov-o-20130430/#startedAtTime">
+                prov:startedAtTime
+            </a>
+        </td>
     </tr>
 
     <tr>
@@ -1715,7 +1816,11 @@ marti:organization/itvDS
 
     <tr>
         <th>Reused Property</th>
-        <td>org:subOrganizationOf</td>
+        <td>
+            <a href="https://www.w3.org/TR/2014/REC-vocab-org-20140116/#org:subOrganizationOf">
+                org:subOrganizationOf
+            </a>
+        </td>
     </tr>
 
     <tr>
@@ -1764,7 +1869,11 @@ marti:organization/itvDS
 
     <tr>
         <th>Reused Property</th>
-        <td>dc:title</td>
+        <td>
+            <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/#http://purl.org/dc/elements/1.1/title">
+                dc:title
+            </a>
+        </td>
     </tr>
 
     <tr>
@@ -1960,7 +2069,11 @@ marti:organization/itvDS
 
     <tr>
         <th>Reused Property</th>
-        <td>dct:identifier</td>
+        <td>
+            <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/#http://purl.org/dc/terms/identifier">
+                dct:identifier
+            </a>
+        </td>
     </tr>
 
     <tr>
@@ -2062,7 +2175,11 @@ marti:agent123
 
     <tr>
         <th>Reused Property</th>
-        <td>foaf:name</td>
+        <td>
+            <a href="https://xmlns.com/foaf/spec/20140114.html#term_name">
+                foaf:name
+            </a>
+        </td>
     </tr>
 
     <tr>
@@ -2114,7 +2231,11 @@ marti:agent123
 
     <tr>
         <th>Reused Property</th>
-        <td>dct:valid</td>
+        <td>
+            <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/#http://purl.org/dc/terms/valid">
+                dct:valid
+            </a>
+        </td>
     </tr>
 
     <tr>
@@ -2165,7 +2286,11 @@ marti:agent123
 
     <tr>
         <th>Reused Property</th>
-        <td>dcat:endDate</td>
+        <td>
+            <a href="https://www.w3.org/TR/2024/REC-vocab-dcat-3-20240822/#Property:period_end_date">
+                dcat:endDate
+            </a>
+        </td>
     </tr>
 
     <tr>
