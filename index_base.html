@@ -1,0 +1,2231 @@
+<select id="languageSwitcher">
+
+<option value="pt">Português</option>
+
+<option value="en">English</option>
+
+<style>
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    max-width:1200px;
+    margin:auto;
+    padding:30px;
+    color:#222;
+}
+
+h1{
+    border-bottom:2px solid #555;
+    padding-bottom:10px;
+}
+
+h2{
+    margin-top:50px;
+    border-top:1px solid #666;
+    padding-top:20px;
+}
+
+.index-table,
+.term-table{
+
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+    margin-bottom:20px;
+}
+
+.index-table th,
+.term-table th{
+
+    width:220px;
+    background:#f5f5f5;
+    text-align:left;
+    padding:10px;
+    border:1px solid #d5d5d5;
+}
+
+.index-table td,
+.term-table td{
+
+    padding:10px;
+    border:1px solid #d5d5d5;
+}
+
+pre{
+
+    background:#f7f7f7;
+    border:1px solid #ddd;
+    padding:15px;
+    overflow:auto;
+}
+
+a{
+    color:#003399;
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+</style>
+
+
+
+<div>
+    <img src="images/ITV_RGB.png" alt="Logo" width="120">
+
+    <h1 data-i18n="title"></h1>
+
+    <p data-i18n="intro"></p>
+
+</div>
+
+<section id="index">
+
+<h2 data-i18n="index_of_terms"></h2>
+
+<table class="index-table">
+
+<tr>
+    <th data-i18n="classes"></th>
+    <td>
+        <a href="#activity">Activity</a>,
+        <a href="#agent">Agent</a>,
+        <a href="#asset">Asset</a>,
+        <a href="#organization">Organization</a>,
+        <a href="#environment">Environment</a>
+    </td>
+</tr>
+
+<tr>
+    <th data-i18n="properties"></th>
+    <td>
+
+        <a href="#identifier">identifier</a>,
+        <a href="#description">description</a>,
+        <a href="#codeRepository">codeRepository</a>,
+        <a href="#accesstype">accessType</a>,
+        <a href="#startedAtTime">startedAtTime</a>,
+        <a href="#endedAtTime">endedAtTime</a>,
+        <a href="#associatedWith">associatedWith</a>,
+        <a href="#organization-prop">organization</a>,
+        <a href="#managerialid">managerialId</a>,
+        <a href="#name">name</a>,
+        <a href="#email">email</a>,
+        <a href="#agenttype">agentType</a>,
+        <a href="#propertygroup">propertyGroup</a>,
+        <a href="#affiliatedOrganization">affiliatedOrganization</a>,
+        <a href="#custodian">custodian</a>,
+        <a href="#accessURL">accessURL</a>,
+        <a href="#spatialCoverage">spatialCoverage</a>,
+        <a href="#assetType">assetType</a>,
+        <a href="#mediaType">mediaType</a>,
+        <a href="#source">source</a>,
+        <a href="#license">license</a>,
+        <a href="#created">created</a>,
+        <a href="#modified">modified</a>,
+        <a href="#parentId">parentId</a>,
+        <a href="#keyword">keyword</a>,
+        <a href="#temporalStart">temporalStart</a>,
+        <a href="#temporalend">temporalEnd</a>,
+        <a href="#valid">valid</a>
+        <a href="#alternateName">alternateName</a>,
+        <a href="#suborganizationof">subOrganizationOf</a>,
+        
+
+
+        
+
+        <!--tEM QUE VERIFICAR <a href="#manager">manager</a>,
+        <a href="#propertygroup">propertyGroup</a>,
+        <a href="#storedin">storedIn</a>,-->
+        
+    </td>
+</tr>
+
+</table>
+
+</section>
+
+
+
+
+<!-- ===================================================== -->
+<!-- CLASSES -->
+<!-- ===================================================== -->
+
+<!-- Activity -->
+<h2 id="activity">Class: Activity</h2>
+
+<table class="term-table">
+    <tr>
+        <th>URI</th>
+        <td>https://marti/Activity</td>
+    </tr>
+
+    <tr>
+        <th>Label</th>
+        <td>Activity</td>
+    </tr>
+
+    <tr>
+        <th>Definition</th>
+        <td>
+            Representa um processo, experimento, execução computacional ou transformação
+            responsável pela geração, manipulação ou utilização de Assets no ecossistema DataLakeDS.
+        </td>
+    </tr>
+
+    <tr>
+        <th>Reused Class</th>
+        <td>
+            <a href="https://www.w3.org/TR/2013/REC-prov-o-20130430/#Activity">
+                prov:Activity
+            </a>
+        </td>
+    </tr>
+
+    <tr>
+        <th>Ontology</th>
+        <td>PROV-O</td>
+    </tr>
+
+    <tr>
+        <th>Comment</th>
+        <td>
+            A classe prov:Activity foi adotada porque Activity representa ações ou processos
+            que ocorrem ao longo do tempo e que utilizam, geram ou modificam Assets em
+            fluxos científicos e computacionais.
+        </td>
+    </tr>
+
+    <tr>
+        <th>Type of Term</th>
+        <td>Class</td>
+    </tr>
+
+    <tr>
+        <th>Example</th>
+        <td>
+<pre>
+@prefix marti: &lt;https://marti/&gt; .
+@prefix prov: &lt;http://www.w3.org/ns/prov#&gt; .
+@prefix dct: &lt;http://purl.org/dc/terms/&gt; .
+
+marti:activity/501
+    a prov:Activity ;
+    dct:identifier "501" ;
+    prov:used marti:asset/129 ;
+    prov:wasAssociatedWith marti:agent/John .
+</pre>
+        </td>
+    </tr>
+</table>
+
+
+<!-- Agent -->
+<h2 id="agent">Class: Agent</h2>
+
+<table class="term-table">
+    <tr>
+        <th>URI</th>
+        <td>https://marti/Agent</td>
+    </tr>
+
+    <tr>
+        <th>Label</th>
+        <td>Agent</td>
+    </tr>
+
+    <tr>
+        <th>Definition</th>
+        <td>
+            Representa indivíduos ou sistemas responsáveis pela criação, manipulação
+            ou gerenciamento de Assets e Activities no ecossistema DataLakeDS.
+        </td>
+    </tr>
+
+    <tr>
+        <th>Reused Class</th>
+        <td>
+            <a href="https://www.w3.org/TR/2013/REC-prov-o-20130430/#Agent">
+                prov:Agent
+            </a>
+        </td>
+    </tr>
+
+    <tr>
+        <th>Ontology</th>
+        <td>PROV-O</td>
+    </tr>
+
+    <tr>
+        <th>Comment</th>
+        <td>
+            A classe prov:Agent foi adotada porque Agent representa entidades responsáveis
+            por executar atividades, gerenciar recursos e participar de relações de
+            proveniência e rastreabilidade no contexto FAIR.
+        </td>
+    </tr>
+
+    <tr>
+        <th>Type of Term</th>
+        <td>Class</td>
+    </tr>
+
+    <tr>
+        <th>Example</th>
+        <td>
+<pre>
+@prefix marti: &lt;https://marti/&gt; .
+@prefix prov: &lt;http://www.w3.org/ns/prov#&gt; .
+@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
+
+marti:agent/john
+    a prov:Agent ;
+    foaf:name "John" .
+</pre>
+        </td>
+    </tr>
+</table>
+
+
+<!-- Asset -->
+<h2 id="asset">Class: Asset</h2>
+
+<table class="term-table">
+    <tr>
+        <th>URI</th>
+        <td>https://marti/Asset</td>
+    </tr>
+
+    <tr>
+        <th>Label</th>
+        <td>Asset</td>
+    </tr>
+
+    <tr>
+        <th>Definition</th>
+        <td>
+            Representa um ativo digital científico armazenado no ecossistema DataLakeDS,
+            incluindo arquivos, conjuntos de dados, diretórios e outros recursos utilizados
+            em processos científicos, atividades analíticas e fluxos de pesquisa.
+        </td>
+    </tr>
+
+    <tr>
+        <th>Reused Class</th>
+        <td>
+            <a href="https://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity">
+                prov:Entity
+            </a>
+        </td>
+    </tr>
+
+    <tr>
+        <th>Ontology</th>
+        <td>PROV-O</td>
+    </tr>
+
+    <tr>
+        <th>Comment</th>
+        <td>
+            A classe prov:Entity foi adotada porque Asset representa recursos identificáveis
+            que participam de atividades, relações de proveniência, rastreabilidade e
+            processos científicos no contexto FAIR.
+        </td>
+    </tr>
+
+    <tr>
+        <th>Type of Term</th>
+        <td>Class</td>
+    </tr>
+
+    <tr>
+        <th>Example</th>
+        <td>
+<pre>
+@prefix marti: &lt;https://itv.org/marti/&gt; .
+@prefix prov: &lt;http://www.w3.org/ns/prov#&gt; .
+@prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+
+marti:asset/129
+    a prov:Entity ;
+    dct:identifier "129" ;
+    prov:wasAttributedTo marti:agent/john .
+</pre>
+        </td>
+    </tr>
+</table>
+
+
+<!-- Environment -->
+<h2 id="environment">Class: Environment</h2>
+
+<table class="term-table">
+    <tr>
+        <th>URI</th>
+        <td>https://marti/Environment</td>
+    </tr>
+
+    <tr>
+        <th>Label</th>
+        <td>Environment</td>
+    </tr>
+
+    <tr>
+        <th>Definition</th>
+        <td>
+            Representa um ambiente computacional, domínio de armazenamento ou localização
+            raiz onde Assets são mantidos na infraestrutura do DataLakeDS, incluindo
+            ambientes cloud e on-premises.
+        </td>
+    </tr>
+
+    <tr>
+        <th>Reused Class</th>
+        <td>Classe própria MARTi</td>
+    </tr>
+
+    <tr>
+        <th>Ontology</th>
+        <td>MARTi</td>
+    </tr>
+
+    <tr>
+        <th>Comment</th>
+        <td>
+            O conceito de Environment representa uma infraestrutura de armazenamento
+            científico específica do domínio DataLakeDS, sem equivalência semântica
+            exata em ontologias amplamente reutilizadas.
+        </td>
+    </tr>
+
+    <tr>
+        <th>Type of Term</th>
+        <td>Class</td>
+    </tr>
+
+    <tr>
+        <th>Example</th>
+        <td>
+<pre>
+@prefix marti: &lt;https://marti/&gt; .
+@prefix dc: &lt;http://purl.org/dc/elements/1.1/&gt; .
+@prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+@prefix schema: &lt;https://schema.org/&gt; .
+@prefix prov: &lt;http://www.w3.org/ns/prov#&gt; .
+
+marti:environment/storage_environment_01
+    a marti:Environment ;
+    dc:title "storage_account_01" .
+</pre>
+        </td>
+    </tr>
+</table>
+
+
+<!-- Organization -->
+<h2 id="organization">Class: Organization</h2>
+
+<table class="term-table">
+    <tr>
+        <th>URI</th>
+        <td>https://marti/Organization</td>
+    </tr>
+
+    <tr>
+        <th>Label</th>
+        <td>Organization</td>
+    </tr>
+
+    <tr>
+        <th>Definition</th>
+        <td>
+            Representa organizações, unidades institucionais ou projetos associados
+            a Asset, Agent e Activity no ecossistema do DataLakeDS.
+        </td>
+    </tr>
+
+    <tr>
+        <th>Reused Class</th>
+        <td>
+            <a href="https://www.w3.org/TR/2014/REC-vocab-org-20140116/#org:Organization">
+                org:Organization
+            </a>
+        </td>
+    </tr>
+
+    <tr>
+        <th>Ontology</th>
+        <td>W3C ORG Ontology</td>
+    </tr>
+
+    <tr>
+        <th>Comment</th>
+        <td>
+            A classe org:Organization foi adotada porque permite representar estruturas
+            organizacionais, unidades institucionais e relações hierárquicas entre
+            organizações associadas a agentes, atividades e ativos científicos no contexto FAIR.
+        </td>
+    </tr>
+
+    <tr>
+        <th>Type of Term</th>
+        <td>Class</td>
+    </tr>
+
+    <tr>
+        <th>Example</th>
+        <td>
+<pre>
+@prefix marti: &lt;https://marti/&gt; .
+@prefix org: &lt;http://www.w3.org/ns/org#&gt; .
+@prefix dct: &lt;http://purl.org/dc/terms/&gt; .
+
+marti:organization/itvDS
+    a org:Organization ;
+    dct:identifier "ITVDS" ;
+    org:hasMember marti:agent/john .
+</pre>
+        </td>
+    </tr>
+</table>
+
+
+
+
+
+
+
+<!-- ===================================================== -->
+<!-- PROPERTY: accessURL -->
+<!-- ===================================================== -->
+
+<h2 id="accessURL">Term Name: accessURL</h2>
+
+<table class="term-table">
+    <tr>
+        <th>URI</th>
+        <td>https://marti/accessURL</td>
+    </tr>
+
+    <tr>
+        <th>Label</th>
+        <td>accessURL</td>
+    </tr>
+
+    <tr>
+        <th>Definition</th>
+        <td>Endereço ou localização de acesso ao Asset.</td>
+    </tr>
+
+    <tr>
+        <th>Reused Property</th>
+        <td>
+            <a href="https://www.w3.org/TR/2024/REC-vocab-dcat-3-20240822/#Property:distribution_access_url">
+                dcat:accessURL
+            </a>
+        </td>
+    </tr>
+
+    <tr>
+        <th>Ontology</th>
+        <td>DCAT</td>
+    </tr>
+
+    <tr>
+        <th>Type of Term</th>
+        <td>Property</td>
+    </tr>
+
+    <tr>
+        <th>Example</th>
+        <td>
+<pre>
+@prefix dcat: &lt;http://www.w3.org/ns/dcat#&gt; .
+
+&lt;https://marti/asset/129&gt;
+    dcat:accessURL &lt;https://datalake.example.org/assets/129&gt; .
+</pre>
+        </td>
+    </tr>
+</table>
+
+
+<!-- ===================================================== -->
+<!-- PROPERTY: custodian -->
+<!-- ===================================================== -->
+
+<h2 id="custodian">Term Name: custodian</h2>
+
+<table class="term-table">
+    <tr>
+        <th>URI</th>
+        <td>https://marti/custodian</td>
+    </tr>
+
+    <tr>
+        <th>Label</th>
+        <td>custodian</td>
+    </tr>
+
+    <tr>
+        <th>Definition</th>
+        <td>Agente responsável pela custódia, gerenciamento ou atribuição do Asset.</td>
+    </tr>
+
+    <tr>
+        <th>Reused Property</th>
+        <td>
+            <a href="https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAttributedTo">
+                prov:wasAttributedTo
+            </a>
+        </td>
+    </tr>
+
+    <tr>
+        <th>Ontology</th>
+        <td>PROV-O</td>
+    </tr>
+
+    <tr>
+        <th>Type of Term</th>
+        <td>Property</td>
+    </tr>
+
+    <tr>
+        <th>Example</th>
+        <td>
+<pre>
+@prefix prov: &lt;http://www.w3.org/ns/prov#&gt; .
+
+&lt;https://marti/asset/129&gt;
+    prov:wasAttributedTo &lt;https://marti/agent/john&gt; .
+</pre>
+        </td>
+    </tr>
+</table>
+
+
+<!-- ===================================================== -->
+<!-- PROPERTY: description -->
+<!-- ===================================================== -->
+
+<h2 id="description">Term Name: description</h2>
+
+<table class="term-table">
+    <tr>
+        <th>URI</th>
+        <td>https://marti/description</td>
+    </tr>
+
+    <tr>
+        <th>Label</th>
+        <td>description</td>
+    </tr>
+
+    <tr>
+        <th>Definition</th>
+        <td>Descrição textual associada ao Asset.</td>
+    </tr>
+
+    <tr>
+        <th>Reused Property</th>
+        <td>
+            <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/#http://purl.org/dc/elements/1.1/description">
+                dc:description
+            </a>
+        </td>
+    </tr>
+
+    <tr>
+        <th>Ontology</th>
+        <td>Dublin Core</td>
+    </tr>
+
+    <tr>
+        <th>Type of Term</th>
+        <td>Property</td>
+    </tr>
+
+    <tr>
+        <th>Example</th>
+        <td>
+<pre>
+@prefix dc: &lt;http://purl.org/dc/elements/1.1/&gt; .
+
+&lt;https://marti/asset/129&gt;
+    dc:description "Geological dataset collected during field exploration." .
+</pre>
+        </td>
+    </tr>
+</table>
+
+
+<!-- ===================================================== -->
+<!-- PROPERTY: identifier -->
+<!-- ===================================================== -->
+
+<h2 id="identifier">Term Name: identifier</h2>
+
+<table class="term-table">
+    <tr>
+        <th>URI</th>
+        <td>https://marti/identifier</td>
+    </tr>
+
+    <tr>
+        <th>Label</th>
+        <td>identifier</td>
+    </tr>
+
+    <tr>
+        <th>Definition</th>
+        <td>
+            Identificador persistente e único utilizado para identificar Assets no ecossistema MARTi.
+        </td>
+    </tr>
+
+    <tr>
+        <th>Reused Property</th>
+        <td>
+            <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/#http://purl.org/dc/terms/identifier">
+                dct:identifier
+            </a>
+        </td>
+    </tr>
+
+    <tr>
+        <th>Ontology</th>
+        <td>Dublin Core Terms</td>
+    </tr>
+
+    <tr>
+        <th>Type of Term</th>
+        <td>Property</td>
+    </tr>
+
+    <tr>
+        <th>Example</th>
+        <td>
+<pre>
+@prefix dct: &lt;http://purl.org/dc/terms/&gt; .
+
+&lt;https://marti/asset/129&gt;
+    dct:identifier "129" .
+</pre>
+        </td>
+    </tr>
+</table>
+
+
+<!-- ===================================================== -->
+<!-- PROPERTY: spatialCoverage -->
+<!-- ===================================================== -->
+
+<h2 id="spatialCoverage">Term Name: spatialCoverage</h2>
+
+<table class="term-table">
+    <tr>
+        <th>URI</th>
+        <td>https://marti/spatialCoverage</td>
+    </tr>
+
+    <tr>
+        <th>Label</th>
+        <td>spatialCoverage</td>
+    </tr>
+
+    <tr>
+        <th>Definition</th>
+        <td>Cobertura ou contexto espacial associado ao Asset.</td>
+    </tr>
+
+    <tr>
+        <th>Reused Property</th>
+        <td>
+            <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/#http://purl.org/dc/terms/spatial">
+                dct:spatial
+            </a>
+        </td>
+    </tr>
+
+    <tr>
+        <th>Ontology</th>
+        <td>Dublin Core Terms</td>
+    </tr>
+
+    <tr>
+        <th>Type of Term</th>
+        <td>Property</td>
+    </tr>
+
+    <tr>
+        <th>Example</th>
+        <td>
+<pre>
+@prefix dct: &lt;http://purl.org/dc/terms/&gt; .
+
+&lt;https://marti/asset/129&gt;
+    dct:spatial "Amazon Basin" .
+</pre>
+        </td>
+    </tr>
+</table>
+
+
+
+
+
+<!-- ===================================================== -->
+<!-- PROPERTY: assetType -->
+<!-- ===================================================== -->
+
+<h2 id="assetType">Term Name: assetType</h2>
+
+<table class="term-table">
+    <tr>
+        <th>URI</th>
+        <td>https://marti/assetType</td>
+    </tr>
+
+    <tr>
+        <th>Label</th>
+        <td>assetType</td>
+    </tr>
+
+    <tr>
+        <th>Definition</th>
+        <td>
+            Indica a representação estrutural do Asset no ambiente de armazenamento.
+            Os valores esperados são: arquivo ou pasta.
+        </td>
+    </tr>
+
+    <tr>
+        <th>Reused Property</th>
+        <td>Nenhuma</td>
+    </tr>
+
+    <tr>
+        <th>Ontology</th>
+        <td>MARTi</td>
+    </tr>
+
+    <tr>
+        <th>Type of Term</th>
+        <td>Property</td>
+    </tr>
+
+    <tr>
+        <th>Example</th>
+        <td>
+<pre>
+@prefix marti: &lt;https://marti/&gt; .
+
+&lt;https://marti/asset/129&gt;
+    marti:assetType "arquivo" .
+</pre>
+        </td>
+    </tr>
+</table>
+
+
+<!-- ===================================================== -->
+<!-- PROPERTY: created -->
+<!-- ===================================================== -->
+
+<h2 id="created">Term Name: created</h2>
+
+<table class="term-table">
+    <tr>
+        <th>URI</th>
+        <td>https://marti/created</td>
+    </tr>
+
+    <tr>
+        <th>Label</th>
+        <td>created</td>
+    </tr>
+
+    <tr>
+        <th>Definition</th>
+        <td>Data de criação do Asset.</td>
+    </tr>
+
+    <tr>
+        <th>Reused Property</th>
+        <td>
+            <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/#http://purl.org/dc/terms/created">
+                dct:created
+            </a>
+        </td>
+    </tr>
+
+    <tr>
+        <th>Ontology</th>
+        <td>Dublin Core Terms</td>
+    </tr>
+
+    <tr>
+        <th>Type of Term</th>
+        <td>Property</td>
+    </tr>
+
+    <tr>
+        <th>Example</th>
+        <td>
+<pre>
+@prefix dct: &lt;http://purl.org/dc/terms/&gt; .
+
+&lt;https://marti/asset/129&gt;
+    dct:created "2025-01-10T12:00:00" .
+</pre>
+        </td>
+    </tr>
+</table>
+
+
+<!-- ===================================================== -->
+<!-- PROPERTY: parentId -->
+<!-- ===================================================== -->
+
+<h2 id="parentId">Term Name: parentId</h2>
+
+<table class="term-table">
+    <tr>
+        <th>URI</th>
+        <td>https://marti/parentId</td>
+    </tr>
+
+    <tr>
+        <th>Label</th>
+        <td>parentId</td>
+    </tr>
+
+    <tr>
+        <th>Definition</th>
+        <td>Referência ao Asset pai na hierarquia de organização dos Assets. Indica que o Asset atual está física ou logicamente contido em outro Asset.</td>
+    </tr>
+
+    <tr>
+        <th>Reused Property</th>
+        <td>Nenhuma</td>
+    </tr>
+
+    <tr>
+        <th>Ontology</th>
+        <td>MARTi</td>
+    </tr>
+
+    <tr>
+        <th>Type of Term</th>
+        <td>Property</td>
+    </tr>
+
+    <tr>
+        <th>Example</th>
+        <td>
+<pre>
+@prefix marti: &lt;https://marti/&gt; .
+
+&lt;https://marti/asset/130&gt;    
+    marti:parentId "129" .
+</pre>
+        </td>
+    </tr>
+</table>
+
+
+<!-- ===================================================== -->
+<!-- PROPERTY: keyword -->
+<!-- ===================================================== -->
+
+<h2 id="keyword">Term Name: keyword</h2>
+
+<table class="term-table">
+    <tr>
+        <th>URI</th>
+        <td>https://marti/keyword</td>
+    </tr>
+
+    <tr>
+        <th>Label</th>
+        <td>keyword</td>
+    </tr>
+
+    <tr>
+        <th>Definition</th>
+        <td>Palavras-chave associadas ao Asset.</td>
+    </tr>
+
+    <tr>
+        <th>Reused Property</th>
+        <td>
+            <a href="https://www.w3.org/TR/2024/REC-vocab-dcat-3-20240822/#Property:resource_keyword">
+                dcat:keyword
+            </a>
+        </td>
+    </tr>
+
+    <tr>
+        <th>Ontology</th>
+        <td>DCAT</td>
+    </tr>
+
+    <tr>
+        <th>Type of Term</th>
+        <td>Property</td>
+    </tr>
+
+    <tr>
+        <th>Example</th>
+        <td>
+<pre>
+@prefix dcat: &lt;http://www.w3.org/ns/dcat#&gt; .
+
+&lt;https://marti/asset/129&gt;
+    dcat:keyword "biology" .
+</pre>
+        </td>
+    </tr>
+</table>
+
+
+<!-- ===================================================== -->
+<!-- PROPERTY: license -->
+<!-- ===================================================== -->
+
+<h2 id="license">Term Name: license</h2>
+
+<table class="term-table">
+    <tr>
+        <th>URI</th>
+        <td>https://marti/license</td>
+    </tr>
+
+    <tr>
+        <th>Label</th>
+        <td>license</td>
+    </tr>
+
+    <tr>
+        <th>Definition</th>
+        <td>Informação de licença associada ao Asset.</td>
+    </tr>
+
+    <tr>
+        <th>Reused Property</th>
+        <td>
+            <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/#http://purl.org/dc/terms/license">
+                dct:license
+            </a>
+        </td>
+    </tr>
+
+    <tr>
+        <th>Ontology</th>
+        <td>Dublin Core Terms</td>
+    </tr>
+
+    <tr>
+        <th>Type of Term</th>
+        <td>Property</td>
+    </tr>
+
+    <tr>
+        <th>Example</th>
+        <td>
+<pre>
+@prefix dct: &lt;http://purl.org/dc/terms/&gt; .
+
+&lt;https://marti/asset/129&gt;
+    dct:license "CC-BY-4.0" .
+</pre>
+        </td>
+    </tr>
+</table>
+
+
+<!-- ===================================================== -->
+<!-- PROPERTY: mediaType -->
+<!-- ===================================================== -->
+
+<h2 id="mediaType">Term Name: mediaType</h2>
+
+<table class="term-table">
+    <tr>
+        <th>URI</th>
+        <td>https://marti/mediaType</td>
+    </tr>
+
+    <tr>
+        <th>Label</th>
+        <td>mediaType</td>
+    </tr>
+
+    <tr>
+        <th>Definition</th>
+        <td>Formato técnico ou tipo MIME do Asset.</td>
+    </tr>
+
+    <tr>
+        <th>Reused Property</th>
+        <td>
+            <a href="https://www.w3.org/TR/2024/REC-vocab-dcat-3-20240822/#Property:distribution_media_type">
+                dcat:mediaType
+            </a>
+        </td>
+    </tr>
+
+    <tr>
+        <th>Ontology</th>
+        <td>DCAT</td>
+    </tr>
+
+    <tr>
+        <th>Comment</th>
+        <td>
+            Necessário para interoperabilidade técnica, acesso e reutilização dos recursos.
+        </td>
+    </tr>
+
+    <tr>
+        <th>Type of Term</th>
+        <td>Property</td>
+    </tr>
+
+    <tr>
+        <th>Example</th>
+        <td>
+<pre>
+@prefix dcat: &lt;http://www.w3.org/ns/dcat#&gt; .
+
+&lt;https://marti/asset/129&gt;
+    dcat:mediaType "application/csv" .
+</pre>
+        </td>
+    </tr>
+</table>
+
+
+<!-- ===================================================== -->
+<!-- PROPERTY: modified -->
+<!-- ===================================================== -->
+
+<h2 id="modified">Term Name: modified</h2>
+
+<table class="term-table">
+    <tr>
+        <th>URI</th>
+        <td>https://marti/modified</td>
+    </tr>
+
+    <tr>
+        <th>Label</th>
+        <td>modified</td>
+    </tr>
+
+    <tr>
+        <th>Definition</th>
+        <td>Data da última modificação do Asset.</td>
+    </tr>
+
+    <tr>
+        <th>Reused Property</th>
+        <td>
+            <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/#http://purl.org/dc/terms/modified">
+                dct:modified
+            </a>
+        </td>
+    </tr>
+
+    <tr>
+        <th>Ontology</th>
+        <td>Dublin Core Terms</td>
+    </tr>
+
+    <tr>
+        <th>Type of Term</th>
+        <td>Property</td>
+    </tr>
+
+    <tr>
+        <th>Example</th>
+        <td>
+<pre>
+@prefix dct: &lt;http://purl.org/dc/terms/&gt; .
+
+&lt;https://marti/asset/129&gt;
+    dct:modified "2025-03-15T09:30:00" .
+</pre>
+        </td>
+    </tr>
+</table>
+
+
+<!-- ===================================================== -->
+<!-- PROPERTY: source -->
+<!-- ===================================================== -->
+
+<h2 id="source">Term Name: source</h2>
+
+<table class="term-table">
+    <tr>
+        <th>URI</th>
+        <td>https://marti/source</td>
+    </tr>
+
+    <tr>
+        <th>Label</th>
+        <td>source</td>
+    </tr>
+
+    <tr>
+        <th>Definition</th>
+        <td>Origem ou fonte relacionada ao Asset.</td>
+    </tr>
+
+    <tr>
+        <th>Reused Property</th>
+        <td>
+            <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/#http://purl.org/dc/elements/1.1/source">
+                dc:source
+            </a>
+        </td>
+    </tr>
+
+    <tr>
+        <th>Ontology</th>
+        <td>Dublin Core</td>
+    </tr>
+
+    <tr>
+        <th>Type of Term</th>
+        <td>Property</td>
+    </tr>
+
+    <tr>
+        <th>Example</th>
+        <td>
+<pre>
+@prefix dc: &lt;http://purl.org/dc/elements/1.1/&gt; .
+
+&lt;https://marti/asset/129&gt;
+    dc:source "Geological field survey" .
+</pre>
+        </td>
+    </tr>
+</table>
+
+
+<!-- ===================================================== -->
+<!-- PROPERTY: temporalStart -->
+<!-- ===================================================== -->
+
+<h2 id="temporalStart">Term Name: temporalStart</h2>
+
+<table class="term-table">
+    <tr>
+        <th>URI</th>
+        <td>https://marti/temporalStart</td>
+    </tr>
+
+    <tr>
+        <th>Label</th>
+        <td>temporalStart</td>
+    </tr>
+
+    <tr>
+        <th>Definition</th>
+        <td>Data inicial da cobertura temporal do Asset.</td>
+    </tr>
+
+    <tr>
+        <th>Reused Property</th>
+        <td>
+            <a href="https://www.w3.org/TR/2024/REC-vocab-dcat-3-20240822/#Property:period_start_date">
+                dcat:startDate
+            </a>
+        </td>
+    </tr>
+
+    <tr>
+        <th>Ontology</th>
+        <td>DCAT</td>
+    </tr>
+
+    <tr>
+        <th>Type of Term</th>
+        <td>Property</td>
+    </tr>
+
+    <tr>
+        <th>Example</th>
+        <td>
+<pre>
+@prefix dcat: &lt;http://www.w3.org/ns/dcat#&gt; .
+
+&lt;https://marti/asset/129&gt;
+    dcat:startDate "2024-01-01" .
+</pre>
+        </td>
+    </tr>
+</table>
+
+
+
+
+
+
+<!-- affiliatedOrganization -->
+<h2 id="affiliatedOrganization">Property: affiliatedOrganization</h2>
+
+<table class="term-table">
+    <tr>
+        <th>URI</th>
+        <td>https://marti/affiliatedOrganization</td>
+    </tr>
+
+    <tr>
+        <th>Label</th>
+        <td>affiliatedOrganization</td>
+    </tr>
+
+    <tr>
+        <th>Definition</th>
+        <td>Organização institucional associada ao Agent.</td>
+    </tr>
+
+    <tr>
+        <th>Reused Property</th>
+        <td>
+            <a href="https://www.w3.org/TR/2014/REC-vocab-org-20140116/#org:memberOf">
+                org:memberOf
+            </a>
+        </td>
+    </tr>
+
+    <tr>
+        <th>Ontology</th>
+        <td>Schema.org</td>
+    </tr>
+
+    <tr>
+        <th>Type of Term</th>
+        <td>Property</td>
+    </tr>
+
+    <tr>
+        <th>Example</th>
+        <td>
+<pre>
+@prefix org: &lt;http://www.w3.org/ns/org#&gt; .
+
+&lt;https://marti/agent/john_smith&gt;
+    org:memberOf &lt;https://marti/organization/itv&gt; .
+</pre>
+        </td>
+    </tr>
+</table>
+
+
+<!-- alternateName -->
+<h2 id="alternateName">Property: alternateName</h2>
+
+<table class="term-table">
+    <tr>
+        <th>URI</th>
+        <td>https://marti/property/alternateName</td>
+    </tr>
+
+    <tr>
+        <th>Label</th>
+        <td>alternateName</td>
+    </tr>
+
+    <tr>
+        <th>Definition</th>
+        <td>Nome alternativo, sigla ou rótulo associado a um recurso organizacional.</td>
+    </tr>
+
+    <tr>
+        <th>Reused Property</th>
+        <td>
+            <a href="https://schema.org/version/30.0#term_alternateName">
+                schema:alternateName
+            </a>
+        </td>
+    </tr>
+
+    <tr>
+        <th>Ontology</th>
+        <td>Schema.org</td>
+    </tr>
+
+    <tr>
+        <th>Type of Term</th>
+        <td>Property</td>
+    </tr>
+
+    <tr>
+        <th>Example</th>
+        <td>
+<pre>
+@prefix schema: &lt;https://schema.org/&gt; .
+
+&lt;https://marti/organization/itv&gt;
+    schema:alternateName "Instituto Tecnológico Vale" .
+</pre>
+        </td>
+    </tr>
+</table>
+
+
+<!-- associatedWith -->
+<h2 id="associatedWith">Property: associatedWith</h2>
+
+<table class="term-table">
+    <tr>
+        <th>URI</th>
+        <td>https://marti/property/associatedWith</td>
+    </tr>
+
+    <tr>
+        <th>Label</th>
+        <td>associatedWith</td>
+    </tr>
+
+    <tr>
+        <th>Definition</th>
+        <td>Agente associado à execução ou responsabilidade de uma Activity.</td>
+    </tr>
+
+    <tr>
+        <th>Reused Property</th>
+        <td>
+            <a href="https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAssociatedWith">
+                prov:wasAssociatedWith
+            </a>
+        </td>
+    </tr>
+
+    <tr>
+        <th>Ontology</th>
+        <td>PROV-O</td>
+    </tr>
+
+    <tr>
+        <th>Type of Term</th>
+        <td>Property</td>
+    </tr>
+
+    <tr>
+        <th>Example</th>
+        <td>
+<pre>
+@prefix prov: &lt;http://www.w3.org/ns/prov#&gt; .
+
+&lt;https://marti/activity/501&gt;
+    prov:wasAssociatedWith &lt;https://marti/agent/john_smith&gt; .
+</pre>
+        </td>
+    </tr>
+</table>
+
+
+<!-- codeRepository -->
+<h2 id="codeRepository">Property: codeRepository</h2>
+
+<table class="term-table">
+    <tr>
+        <th>URI</th>
+        <td>https://marti/property/codeRepository</td>
+    </tr>
+
+    <tr>
+        <th>Label</th>
+        <td>codeRepository</td>
+    </tr>
+
+    <tr>
+        <th>Definition</th>
+        <td>Repositório de código associado a uma Activity.</td>
+    </tr>
+
+    <tr>
+        <th>Reused Property</th>
+        <td>
+            <a href="https://schema.org/version/30.0#term_codeRepository">
+                schema:codeRepository
+            </a>
+        </td>
+    </tr>
+
+    <tr>
+        <th>Ontology</th>
+        <td>Schema.org</td>
+    </tr>
+
+    <tr>
+        <th>Type of Term</th>
+        <td>Property</td>
+    </tr>
+
+    <tr>
+        <th>Example</th>
+        <td>
+<pre>
+@prefix schema: &lt;https://schema.org/&gt; .
+
+&lt;https://marti/activity/501&gt;
+    schema:codeRepository &lt;https://github.com/example/analysis&gt; .
+</pre>
+        </td>
+    </tr>
+</table>
+
+
+<!-- email -->
+<h2 id="email">Property: email</h2>
+
+<table class="term-table">
+    <tr>
+        <th>URI</th>
+        <td>https://marti/email</td>
+    </tr>
+
+    <tr>
+        <th>Label</th>
+        <td>email</td>
+    </tr>
+
+    <tr>
+        <th>Definition</th>
+        <td>Endereço eletrônico de contato associado a um Agent.</td>
+    </tr>
+
+    <tr>
+        <th>Reused Property</th>
+        <td>
+            <a href="https://xmlns.com/foaf/spec/20140114.html#term_mbox">
+                foaf:mbox
+            </a>
+        </td>
+    </tr>
+
+    <tr>
+        <th>Ontology</th>
+        <td>FOAF</td>
+    </tr>
+
+    <tr>
+        <th>Type of Term</th>
+        <td>Property</td>
+    </tr>
+
+    <tr>
+        <th>Example</th>
+        <td>
+<pre>
+@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
+
+&lt;https://marti/agent/john_smith&gt;
+    foaf:mbox "john.smith@example.org" .
+</pre>
+        </td>
+    </tr>
+</table>
+
+
+<!-- endedAtTime -->
+<h2 id="endedAtTime">Property: endedAtTime</h2>
+
+<table class="term-table">
+    <tr>
+        <th>URI</th>
+        <td>https://marti/property/endedAtTime</td>
+    </tr>
+
+    <tr>
+        <th>Label</th>
+        <td>endedAtTime</td>
+    </tr>
+
+    <tr>
+        <th>Definition</th>
+        <td>Momento de término de uma Activity.</td>
+    </tr>
+
+    <tr>
+        <th>Reused Property</th>
+        <td>
+            <a href="https://www.w3.org/TR/2013/REC-prov-o-20130430/#endedAtTime">
+                prov:endedAtTime
+            </a>
+        </td>
+    </tr>
+
+    <tr>
+        <th>Ontology</th>
+        <td>PROV-O</td>
+    </tr>
+
+    <tr>
+        <th>Type of Term</th>
+        <td>Property</td>
+    </tr>
+
+    <tr>
+        <th>Example</th>
+        <td>
+<pre>
+@prefix prov: &lt;http://www.w3.org/ns/prov#&gt; .
+
+&lt;https://marti/activity/501&gt;
+    prov:endedAtTime "2025-03-01T12:30:00" .
+</pre>
+        </td>
+    </tr>
+</table>
+
+
+<!-- manager -->
+<h2 id="manager">Property: manager</h2>
+
+<table class="term-table">
+    <tr>
+        <th>URI</th>
+        <td>https://marti/property/manager</td>
+    </tr>
+
+    <tr>
+        <th>Label</th>
+        <td>manager</td>
+    </tr>
+
+    <tr>
+        <th>Definition</th>
+        <td>Agent responsável pela coordenação, gerenciamento ou supervisão de uma Organization.</td>
+    </tr>
+
+    <tr>
+        <th>Reused Property</th>
+        <td>
+            <a href="hhttps://www.w3.org/TR/2014/REC-vocab-org-20140116/#property-headof">
+                org:headOf
+            </a>
+        </td>
+    </tr>
+
+    <tr>
+        <th>Ontology</th>
+        <td>Schema.org</td>
+    </tr>
+
+    <tr>
+        <th>Type of Term</th>
+        <td>Property</td>
+    </tr>
+
+    <tr>
+        <th>Example</th>
+        <td>
+<pre>
+@prefix org: &lt;http://www.w3.org/ns/org#&gt; .
+
+&lt;https://marti/agent/john_smith&gt;
+    org:headOf &lt;https://marti/organization/itv&gt; .
+</pre>
+        </td>
+    </tr>
+</table>
+
+
+<!-- organization -->
+<h2 id="organization-prop">Property: organization</h2>
+
+<table class="term-table">
+    <tr>
+        <th>URI</th>
+        <td>https://marti/property/organization</td>
+    </tr>
+
+    <tr>
+        <th>Label</th>
+        <td>organization</td>
+    </tr>
+
+    <tr>
+        <th>Definition</th>
+        <td>Organização institucional associada a uma Activity.</td>
+    </tr>
+
+    <tr>
+        <th>Reused Property</th>
+        <td>
+            <a href="https://www.w3.org/TR/2014/REC-vocab-org-20140116/#org:organization">
+                org:organization
+            </a>
+        </td>
+    </tr>
+
+    <tr>
+        <th>Ontology</th>
+        <td>W3C ORG Ontology</td>
+    </tr>
+
+    <tr>
+        <th>Type of Term</th>
+        <td>Property</td>
+    </tr>
+
+    <tr>
+        <th>Example</th>
+        <td>
+<pre>
+@prefix org: &lt;http://www.w3.org/ns/org#&gt; .
+
+&lt;https://marti/activity/501&gt;
+    org:organization &lt;https://marti/organization/itv&gt; .
+</pre>
+        </td>
+    </tr>
+</table>
+
+
+
+<!-- startedAtTime -->
+<h2 id="startedAtTime">Property: startedAtTime</h2>
+
+<table class="term-table">
+    <tr>
+        <th>URI</th>
+        <td>https://marti/property/startedAtTime</td>
+    </tr>
+
+    <tr>
+        <th>Label</th>
+        <td>startedAtTime</td>
+    </tr>
+
+    <tr>
+        <th>Definition</th>
+        <td>Momento de início de uma Activity.</td>
+    </tr>
+
+    <tr>
+        <th>Reused Property</th>
+        <td>
+            <a href="https://www.w3.org/TR/2013/REC-prov-o-20130430/#startedAtTime">
+                prov:startedAtTime
+            </a>
+        </td>
+    </tr>
+
+    <tr>
+        <th>Ontology</th>
+        <td>PROV-O</td>
+    </tr>
+
+    <tr>
+        <th>Type of Term</th>
+        <td>Property</td>
+    </tr>
+
+    <tr>
+        <th>Example</th>
+        <td>
+<pre>
+@prefix prov: &lt;http://www.w3.org/ns/prov#&gt; .
+
+&lt;https://marti/activity/501&gt;
+    prov:startedAtTime "2025-03-01T10:00:00" .
+</pre>
+        </td>
+    </tr>
+</table>
+
+
+
+
+<!-- subOrganizationOf -->
+<h2 id="suborganizationof">Property: subOrganizationOf</h2>
+
+<table class="term-table">
+    <tr>
+        <th>URI</th>
+        <td>https://marti/property/subOrganizationOf</td>
+    </tr>
+
+    <tr>
+        <th>Label</th>
+        <td>subOrganizationOf</td>
+    </tr>
+
+    <tr>
+        <th>Definition</th>
+        <td>
+            Relação hierárquica entre organizações, indicando pertencimento institucional.
+        </td>
+    </tr>
+
+    <tr>
+        <th>Reused Property</th>
+        <td>
+            <a href="https://www.w3.org/TR/2014/REC-vocab-org-20140116/#org:subOrganizationOf">
+                org:subOrganizationOf
+            </a>
+        </td>
+    </tr>
+
+    <tr>
+        <th>Ontology</th>
+        <td>W3C ORG Ontology</td>
+    </tr>
+
+    <tr>
+        <th>Type of Term</th>
+        <td>Property</td>
+    </tr>
+
+    <tr>
+        <th>Example</th>
+        <td>
+<pre>
+@prefix org: &lt;http://www.w3.org/ns/org#&gt; .
+
+&lt;https://marti/organization/itv&gt;
+    org:subOrganizationOf &lt;https://marti/organization/vale&gt; .
+</pre>
+        </td>
+    </tr>
+</table>
+
+<!-- agentType -->
+<h2 id="agenttype">Property: agentType</h2>
+
+<table class="term-table">
+    <tr>
+        <th>URI</th>
+        <td>https://marti/agentType</td>
+    </tr>
+
+    <tr>
+        <th>Label</th>
+        <td>agentType</td>
+    </tr>
+
+    <tr>
+        <th>Definition</th>
+        <td>
+            Indica a categoria do Agent no ecossistema DataLakeDS. Essa propriedade permite distinguir agentes humanos de agentes computacionais responsáveis pela criação, execução, manipulação ou gerenciamento de Assets e Activities.
+        </td>
+    </tr>
+
+    <tr>
+        <th>Reused Property</th>
+        <td>
+            <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/#http://purl.org/dc/terms/type">
+               dct:type
+            </a>
+        </td>
+    </tr>
+
+    <tr>
+        <th>Ontology</th>
+        <td>Dublin Core Terms</td>
+    </tr>
+
+    <tr>
+        <th>Type of Term</th>
+        <td>Property</td>
+    </tr>
+
+    <tr>
+        <th>Example</th>
+        <td>
+<pre>
+@prefix marti: &lt;https://marti/&gt; .
+
+&lt;https://marti/agent/john_smith&gt;
+    marti:agentType "person" .
+</pre>
+        </td>
+    </tr>
+</table>
+
+<!-- propertyGroup -->
+<h2 id="propertygroup">Property: propertyGroup</h2>
+
+<table class="term-table">
+    <tr>
+        <th>URI</th>
+        <td>https://marti/propertyGroup</td>
+    </tr>
+
+    <tr>
+        <th>Label</th>
+        <td>propertyGroup</td>
+    </tr>
+
+    <tr>
+        <th>Definition</th>
+        <td>
+            Conjunto semiestruturado de propriedades técnicas utilizadas para descrever a infraestrutura do ambiente e fornecer as informações necessárias para localização e acesso aos Assets. Os atributos presentes variam conforme o tipo de ambiente e podem incluir identificadores de recursos cloud, links de armazenamento, endpoints de serviços, caminhos de rede, configurações de conexão ou outros parâmetros técnicos necessários para localizar ou acessar os Assets armazenados no ambiente.
+        </td>
+    </tr>
+
+    <tr>
+        <th>Reused Property</th>
+        <td>None</td>
+    </tr>
+
+    <tr>
+        <th>Ontology</th>
+        <td>MARTi</td>
+    </tr>
+
+    <tr>
+        <th>Type of Term</th>
+        <td>Property</td>
+    </tr>
+
+    <tr>
+        <th>Example</th>
+        <td>
+<pre>
+@prefix marti: &lt;https://marti/&gt; .
+
+&lt;https://marti/root/storage_environment_01&gt;
+    marti:propertyGroup &lt;https://marti/property-group/environment_01&gt; .
+
+&lt;https://marti/property-group/environment_01&gt;
+    marti:resourceGroup "azusds" ;
+    marti:infrastructureType "onpremises" .
+</pre>
+        </td>
+    </tr>
+</table>
+
+<!-- storedIn -->
+<h2 id="storedin">Property: storedIn</h2>
+
+<table class="term-table">
+    <tr>
+        <th>URI</th>
+        <td>https://marti/storedIn</td>
+    </tr>
+
+    <tr>
+        <th>Label</th>
+        <td>storedIn</td>
+    </tr>
+
+    <tr>
+        <th>Definition</th>
+        <td>
+            Relaciona um Asset ao ambiente computacional ou de armazenamento onde ele é mantido. Essa relação permite representar a localização lógica do recurso dentro da infraestrutura DataLakeDS, incluindo ambientes cloud e on-premises.
+        </td>
+    </tr>
+
+    <tr>
+        <th>Reused Property</th>
+        <td>Nenhuma</td>
+    </tr>
+
+    <tr>
+        <th>Ontology</th>
+        <td>MARTi</td>
+    </tr>
+
+    <tr>
+        <th>Type of Term</th>
+        <td>Property</td>
+    </tr>
+
+    <tr>
+        <th>Example</th>
+        <td>
+<pre>
+@prefix marti: &lt;https://marti/&gt; .
+
+&lt;https://marti/asset/129&gt;
+    marti:storedIn &lt;https://marti/root/storage_environment_01&gt; .
+</pre>
+        </td>
+    </tr>
+</table>
+
+<!-- managerialId -->
+<h2 id="managerialid">Property: managerialId</h2>
+
+<table class="term-table">
+    <tr>
+        <th>URI</th>
+        <td>https://marti/managerialId</td>
+    </tr>
+
+    <tr>
+        <th>Label</th>
+        <td>managerialId</td>
+    </tr>
+
+    <tr>
+        <th>Definition</th>
+        <td>
+            Identificador administrativo interno atribuído a um agente ou organização para fins de gestão corporativa, integração de sistemas e rastreabilidade institucional.
+        </td>
+    </tr>
+
+    <tr>
+        <th>Reused Property</th>
+        <td>
+            <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/#http://purl.org/dc/terms/identifier">
+                dct:identifier
+            </a>
+        </td>
+    </tr>
+
+    <tr>
+        <th>Ontology</th>
+        <td>Dublin Core Terms</td>
+    </tr>
+
+    <tr>
+        <th>Type of Term</th>
+        <td>Property</td>
+    </tr>
+
+    <tr>
+        <th>Example</th>
+        <td>
+<pre>
+@prefix marti: &lt;https://marti/&gt; .
+
+marti:agent123
+    marti:managerialId "R100603.BL" .
+</pre>
+        </td>
+    </tr>
+</table>
+
+<!-- accessType -->
+<h2 id="accesstype">Property: accessType</h2>
+
+<table class="term-table">
+    <tr>
+        <th>URI</th>
+        <td>https://marti/accessType</td>
+    </tr>
+
+    <tr>
+        <th>Label</th>
+        <td>accessType</td>
+    </tr>
+
+    <tr>
+        <th>Definition</th>
+        <td>
+            Define o tipo de acesso ou operação realizada pela Activity sobre um ou mais Assets. Essa propriedade descreve a forma de interação da atividade com os recursos envolvidos, permitindo identificar ações como leitura, escrita, exclusão, execução ou outras operações suportadas pelo ambiente.
+        </td>
+    </tr>
+
+    <tr>
+        <th>Reused Property</th>
+        <td>Nenhuma</td>
+    </tr>
+
+    <tr>
+        <th>Ontology</th>
+        <td>MARTi</td>
+    </tr>
+
+    <tr>
+        <th>Type of Term</th>
+        <td>Property</td>
+    </tr>
+
+    <tr>
+        <th>Example</th>
+        <td>
+<pre>
+@prefix marti: &lt;https://marti/&gt; .
+
+&lt;https://marti/activity/45&gt;
+    marti:accessType "read" .
+</pre>
+        </td>
+    </tr>
+</table>
+
+
+
+
+
+<!-- name -->
+<h2 id="name">Property: name</h2>
+
+<table class="term-table">
+    <tr>
+        <th>URI</th>
+        <td>https://marti/name</td>
+    </tr>
+
+    <tr>
+        <th>Label</th>
+        <td>name</td>
+    </tr>
+
+    <tr>
+        <th>Definition</th>
+        <td>
+            Nome associado a um indivíduo, sistema, organização ou recurso no ecossistema MARTi.
+        </td>
+    </tr>
+
+    <tr>
+        <th>Reused Property</th>
+        <td>
+            <a href="https://xmlns.com/foaf/spec/20140114.html#term_name">
+                foaf:name
+            </a>
+        </td>
+    </tr>
+
+    <tr>
+        <th>Ontology</th>
+        <td>FOAF</td>
+    </tr>
+
+    <tr>
+        <th>Type of Term</th>
+        <td>Property</td>
+    </tr>
+
+    <tr>
+        <th>Example</th>
+        <td>
+<pre>
+@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
+
+&lt;https://marti/agent/john_smith&gt;
+    foaf:name "John Smith" .
+</pre>
+        </td>
+    </tr>
+</table>
+
+
+
+
+<!-- valid -->
+<h2 id="valid">Property: valid</h2>
+
+<table class="term-table">
+    <tr>
+        <th>URI</th>
+        <td>https://marti/valid</td>
+    </tr>
+
+    <tr>
+        <th>Label</th>
+        <td>valid</td>
+    </tr>
+
+    <tr>
+        <th>Definition</th>
+        <td>
+            Período de validade temporal associado ao Asset.
+        </td>
+    </tr>
+
+    <tr>
+        <th>Reused Property</th>
+        <td>
+            <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/2020-01-20/#http://purl.org/dc/terms/valid">
+                dct:valid
+            </a>
+        </td>
+    </tr>
+
+    <tr>
+        <th>Ontology</th>
+        <td>Dublin Core Terms</td>
+    </tr>
+
+    <tr>
+        <th>Type of Term</th>
+        <td>Property</td>
+    </tr>
+
+    <tr>
+        <th>Example</th>
+        <td>
+<pre>
+@prefix dct: &lt;http://purl.org/dc/terms/&gt; .
+
+&lt;https://marti/asset/129&gt;
+    dct:valid "2025-12-31" .
+</pre>
+        </td>
+    </tr>
+</table>
+
+
+
+<!-- temporalEnd -->
+<h2 id="temporalend">Property: temporalEnd</h2>
+
+<table class="term-table">
+    <tr>
+        <th>URI</th>
+        <td>https://marti/temporalEnd</td>
+    </tr>
+
+    <tr>
+        <th>Label</th>
+        <td>temporalEnd</td>
+    </tr>
+
+    <tr>
+        <th>Definition</th>
+        <td>
+            Data final da cobertura temporal do Asset.
+        </td>
+    </tr>
+
+    <tr>
+        <th>Reused Property</th>
+        <td>
+            <a href="https://www.w3.org/TR/2024/REC-vocab-dcat-3-20240822/#Property:period_end_date">
+                dcat:endDate
+            </a>
+        </td>
+    </tr>
+
+    <tr>
+        <th>Ontology</th>
+        <td>DCAT</td>
+    </tr>
+
+    <tr>
+        <th>Type of Term</th>
+        <td>Property</td>
+    </tr>
+
+    <tr>
+        <th>Example</th>
+        <td>
+<pre>
+@prefix dcat: &lt;http://www.w3.org/ns/dcat#&gt; .
+
+&lt;https://marti/asset/129&gt;
+    dcat:endDate "2024-12-31" .
+</pre>
+        </td>
+    </tr>
+</table>
+

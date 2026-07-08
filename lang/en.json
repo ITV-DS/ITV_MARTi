@@ -1,0 +1,120 @@
+{
+  "title": "MARTi (Metadata Attribution for Research Transparency by ITV)",
+
+  "intro": "It is a metadata model intended for the semantic representation of scientific assets stored in the ITV Data Lake, including provenance, agents, activities, organizations, and associated relationships.",
+
+  "index_of_terms": "Index of Terms",
+
+  "classes": "Classes",
+
+  "properties": "Properties",
+
+
+  "class": "Class",
+  
+  "reused_class": "Reused Class",
+  
+  "comment": "Comment",
+  "none": "None",
+ 
+  "activity_comment": "The prov:Activity class was adopted because Activity represents actions or processes that occur over time and that use, generate, or modify Assets within scientific and computational workflows.",
+
+"agent_comment": "The prov:Agent class was adopted because Agent represents entities responsible for executing activities, managing resources, and participating in provenance and traceability relationships within the FAIR context.",
+
+"asset_comment": "The prov:Entity class was adopted because Asset represents identifiable resources that participate in activities, provenance relationships, traceability, and scientific processes within the FAIR context.",
+
+"environment_comment": "The Environment concept represents a domain-specific scientific storage infrastructure in the DataLakeDS context, with no exact semantic equivalence in widely reused ontologies.",
+
+"environment_reused_class": "MARTi proprietary class",
+
+"organization_comment": "The org:Organization class was adopted because it enables the representation of organizational structures, institutional units, and hierarchical relationships among organizations associated with agents, activities, and scientific assets within the FAIR context.",
+
+  "term_name": "Term Name",
+    "uri": "URI",
+    "label": "Label",
+    "definition": "Definition",
+    "reused_property": "Reused Property",
+    "ontology": "Ontology",
+    "type_of_term": "Type of Term",
+    "example": "Example",
+    "property_term": "Property",
+    "class_term": "Class",
+    "datatype_term": "Datatype",
+    "activity_definition": "Represents a process, experiment, computational execution, or transformation responsible for the generation, manipulation, or use of Assets within the DataLakeDS ecosystem.",
+
+"agent_definition": "Represents individuals or systems responsible for the creation, manipulation, or management of Assets and Activities within the DataLakeDS ecosystem.",
+
+"asset_definition": "Represents a scientific digital asset stored within the DataLakeDS ecosystem, including files, datasets, directories, and other resources used in scientific processes, analytical activities, and research workflows.",
+
+"environment_definition": "Represents a computational environment, storage domain, or root location where Assets are maintained within the DataLakeDS infrastructure, including cloud and on-premises environments.",
+
+"organization_definition": "Represents organizations, institutional units, or projects associated with Assets, Agents, and Activities within the DataLakeDS ecosystem.",
+
+"accessURL_definition": "Address or access location of the Asset.",
+
+"custodian_definition": "Agent responsible for the custody, management, or stewardship of the Asset.",
+
+"description_definition": "Textual description associated with the Asset.",
+
+"identifier_definition": "Persistent and unique identifier used to identify Assets within the MARTi ecosystem.",
+
+"spatialCoverage_definition": "Spatial coverage or context associated with the Asset.",
+
+"assetType_definition": "Indicates the structural representation of the Asset in the storage environment. Expected values are: file or folder.",
+
+"created_definition": "Creation date of the Asset.",
+
+"parentId_definition": "Reference to the parent Asset in the Asset organizational hierarchy. Indicates that the current Asset is physically or logically contained within another Asset.",
+
+"keyword_definition": "Keywords associated with the Asset.",
+
+"license_definition": "License information associated with the Asset.",
+
+"mediaType_definition": "Technical format or MIME type of the Asset.",
+
+"mediaType_comment": "Required for technical interoperability, access, and reuse of resources.",
+
+"modified_definition": "Date of the last modification of the Asset.",
+
+"source_definition": "Origin or source related to the Asset.",
+
+"temporalStart_definition": "Start date of the Asset's temporal coverage.",
+
+"affiliatedOrganization_definition": "Institutional organization associated with the Agent.",
+
+"alternateName_definition": "Alternative name, acronym, or label associated with an organizational resource.",
+
+"associatedWith_definition": "Agent associated with the execution of or responsibility for an Activity.",
+
+"codeRepository_definition": "Code repository associated with an Activity.",
+
+"email_definition": "Contact email address associated with an Agent.",
+
+"endedAtTime_definition": "End time of an Activity.",
+
+"manager_definition": "Agent responsible for the coordination, management, or supervision of an Organization.",
+
+"organization-prop_definition": "Institutional organization associated with an Activity.",
+
+"startedAtTime_definition": "Start time of an Activity.",
+
+"suborganizationof_definition": "Hierarchical relationship between organizations, indicating institutional membership.",
+
+"agenttype_definition": "Indicates the category of the Agent within the DataLakeDS ecosystem. This property allows distinguishing human agents from computational agents responsible for the creation, execution, manipulation, or management of Assets and Activities.",
+
+"propertygroup_definition": "Semi-structured set of technical properties used to describe the environment infrastructure and provide the information necessary for locating and accessing Assets. The included attributes vary according to the environment type and may include cloud resource identifiers, storage links, service endpoints, network paths, connection settings, or other technical parameters required to locate or access Assets stored in the environment.",
+
+"storedin_definition": "Relates an Asset to the computational or storage environment in which it is maintained. This relationship enables the logical location of the resource within the DataLakeDS infrastructure to be represented, including cloud and on-premises environments.",
+
+"managerialid_definition": "Internal administrative identifier assigned to an agent or organization for corporate management, system integration, and institutional traceability purposes.",
+
+"accesstype_definition": "Defines the type of access or operation performed by an Activity on one or more Assets. This property describes how the activity interacts with the involved resources, enabling the identification of actions such as reading, writing, deletion, execution, or other operations supported by the environment.",
+
+"name_definition": "Name associated with an individual, system, organization, or resource within the MARTi ecosystem.",
+
+"valid_definition": "Temporal validity period associated with the Asset.",
+
+"temporalend_definition": "End date of the Asset's temporal coverage."
+
+}
+
